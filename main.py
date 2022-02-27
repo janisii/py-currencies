@@ -19,10 +19,6 @@ PORT = os.getenv('PORT')
 # Currencies with rates data object
 RATES_DATA = get_rates(ENV, RATES_API_ACCESS_KEY)
 
-# Last update / on app start set last update before cache timeout to force load
-# new rates from exchangerates api
-RATES_LAST_UPDATE = get_rates_latest_timestamp(RATES_DATA)
-
 
 webapp = Flask(__name__)
 api = Api(webapp)
