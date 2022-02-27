@@ -4,7 +4,9 @@ Currencies converter app created with Python and Flask (restful api).
 
 ## Demo app
 
-Demo app is deployed on Heroku PaaS.
+Demo app is deployed on Heroku. You can play with it.
+
+[https://py-currencies.herokuapp.com/](https://py-currencies.herokuapp.com/)
 
 ## Docker
 
