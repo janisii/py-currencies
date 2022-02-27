@@ -8,6 +8,36 @@ Demo app is deployed on Heroku PaaS.
 
 ## Docker
 
+Build app image.
+
+`$ docker build . -t py-currencies/demo`
+
+List all docker images.
+
+```commandline
+$ docker images     
+REPOSITORY           TAG       IMAGE ID       CREATED          SIZE
+py-currencies/demo   latest    b032f74cff9a   5 minutes ago    946MB
+<none>               <none>    b1c5a22e9d74   15 minutes ago   917MB
+```
+
+Run docker container form created image.
+
+`$ docker run -d -p 80:3333 b032f74cff9a`
+
+List all docker containers running.
+
+```commandline
+$ docker ps   
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
+9a541fbf708e   b032f74cff9a   "python3 /app/main.py"   2 minutes ago   Up 2 minutes   0.0.0.0:80->3333/tcp   priceless_lamport
+```
+
+Shutdown running app container.
+
+```commandline
+$ docker stop 9a541fbf708e
+```
 
 ## Usage
 

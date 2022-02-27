@@ -113,7 +113,7 @@ class RatesConvertApi(Resource):
 
         # Check for from_value to be number
         try:
-            from_value = int(from_value)
+            from_value = float(from_value)
         except ValueError as e:
             abort(400, error="Money must be number.")
 
@@ -137,7 +137,7 @@ api.add_resource(RatesConvertApi, "/convert/<from_value>/<from_currency>/<to_cur
 
 parser = reqparse.RequestParser()
 parser.add_argument("currency")
-parser.add_argument("from_value", type=int, help="Money value must be integer.")
+parser.add_argument("from_value", type=float, help="Money value must be number.")
 parser.add_argument("from_currency")
 parser.add_argument("to_currency")
 parser.add_argument("new_currency")
