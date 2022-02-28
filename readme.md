@@ -1,7 +1,10 @@
 # Currencies Converter App
 
 Currencies converter app created with Python and Flask (restful api).
+Two environments available - dev (with test data) and prod (with real currencies rates).
 
+To run application in production environment you will have to create account on [Exchange Rates API](https://exchangeratesapi.io).
+ 
 ## Demo app
 
 Demo app is deployed on Heroku. You can play with it.

@@ -107,6 +107,9 @@ class RatesConvertApi(Resource):
             print("Debug: Cache timeout. Rates updated.")
             RATES_DATA = get_rates(ENV, RATES_API_ACCESS_KEY)
 
+        from_currency = from_currency.upper()[0:3]
+        to_currency = to_currency.upper()[0:3]
+
         # Check for from_value to be number
         try:
             from_value = float(from_value)
